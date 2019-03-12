@@ -16,6 +16,14 @@
 		847D0D8622379B410060AA50 /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D0D8522379B410060AA50 /* WeatherAppTests.swift */; };
 		847D0D9122379B410060AA50 /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D0D9022379B410060AA50 /* WeatherAppUITests.swift */; };
 		8489D1232237AA2D0000FA5C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8489D1222237AA2D0000FA5C /* Alamofire.framework */; };
+		8489D1242237ACC80000FA5C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8489D1222237AA2D0000FA5C /* Alamofire.framework */; };
+		8489D1312237AE310000FA5C /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489D12A2237AE310000FA5C /* Wind.swift */; };
+		8489D1322237AE310000FA5C /* Clouds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489D12B2237AE310000FA5C /* Clouds.swift */; };
+		8489D1332237AE310000FA5C /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489D12C2237AE310000FA5C /* CurrentWeather.swift */; };
+		8489D1342237AE310000FA5C /* WeatherDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489D12D2237AE310000FA5C /* WeatherDetails.swift */; };
+		8489D1352237AE310000FA5C /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489D12E2237AE310000FA5C /* Main.swift */; };
+		8489D1362237AE310000FA5C /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489D12F2237AE310000FA5C /* Coord.swift */; };
+		8489D1372237AE310000FA5C /* Sys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489D1302237AE310000FA5C /* Sys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,13 @@
 		847D0D9022379B410060AA50 /* WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITests.swift; sourceTree = "<group>"; };
 		847D0D9222379B410060AA50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8489D1222237AA2D0000FA5C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		8489D12A2237AE310000FA5C /* Wind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
+		8489D12B2237AE310000FA5C /* Clouds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clouds.swift; sourceTree = "<group>"; };
+		8489D12C2237AE310000FA5C /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		8489D12D2237AE310000FA5C /* WeatherDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDetails.swift; sourceTree = "<group>"; };
+		8489D12E2237AE310000FA5C /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		8489D12F2237AE310000FA5C /* Coord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
+		8489D1302237AE310000FA5C /* Sys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8489D1242237ACC80000FA5C /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +119,7 @@
 		847D0D6C22379B400060AA50 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				8489D1292237AE310000FA5C /* Model */,
 				847D0D6D22379B400060AA50 /* AppDelegate.swift */,
 				847D0D6F22379B400060AA50 /* WeatherViewController.swift */,
 				847D0D7122379B400060AA50 /* Main.storyboard */,
@@ -138,6 +155,20 @@
 				8489D1222237AA2D0000FA5C /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8489D1292237AE310000FA5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8489D12A2237AE310000FA5C /* Wind.swift */,
+				8489D12B2237AE310000FA5C /* Clouds.swift */,
+				8489D12C2237AE310000FA5C /* CurrentWeather.swift */,
+				8489D12D2237AE310000FA5C /* WeatherDetails.swift */,
+				8489D12E2237AE310000FA5C /* Main.swift */,
+				8489D12F2237AE310000FA5C /* Coord.swift */,
+				8489D1302237AE310000FA5C /* Sys.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,9 +324,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8489D1342237AE310000FA5C /* WeatherDetails.swift in Sources */,
 				847D0D7622379B400060AA50 /* WeatherApp.xcdatamodeld in Sources */,
+				8489D1352237AE310000FA5C /* Main.swift in Sources */,
+				8489D1362237AE310000FA5C /* Coord.swift in Sources */,
 				847D0D7022379B400060AA50 /* WeatherViewController.swift in Sources */,
+				8489D1372237AE310000FA5C /* Sys.swift in Sources */,
 				847D0D6E22379B400060AA50 /* AppDelegate.swift in Sources */,
+				8489D1312237AE310000FA5C /* Wind.swift in Sources */,
+				8489D1332237AE310000FA5C /* CurrentWeather.swift in Sources */,
+				8489D1322237AE310000FA5C /* Clouds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +552,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WeatherAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -534,6 +576,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WeatherAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
