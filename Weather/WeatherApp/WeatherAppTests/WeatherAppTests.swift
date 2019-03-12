@@ -8,7 +8,6 @@
 
 import XCTest
 import Alamofire
-
 @testable import WeatherApp
 
 class WeatherAppTests: XCTestCase {

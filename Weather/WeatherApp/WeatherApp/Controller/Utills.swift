@@ -28,8 +28,15 @@ class Utils {
             
         })
     }
+    
 }
-
+extension UIViewController {
+    func alertWithTitle(message: String) {
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+}
 // MARK :- Custom Class For UIView
 @IBDesignable class CustomView : UIView {
     @IBInspectable var startColor: UIColor = UIColor.white {

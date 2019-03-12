@@ -18,14 +18,15 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var sunsetTimeLabel : UILabel!
     @IBOutlet weak var sunriseTimeLabel : UILabel!
     
+    //Getting current Location
     var locationManager : CLLocationManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
+    
 }
 extension WeatherViewController :  CLLocationManagerDelegate {
     
@@ -52,10 +53,14 @@ extension WeatherViewController :  CLLocationManagerDelegate {
         // Call stopUpdatingLocation() to stop listening for location updates,
         // other wise this function will be called every time when user location changes.
         //manager.stopUpdatingLocation()
-        print("user latitude = \(userLocation.coordinate.latitude)")
-        print("user longitude = \(userLocation.coordinate.longitude)")
+        
+        
         // Fetching Today Weather
-        APIManger.getResponseAboutWeatherApi(userLocation.coordinate.latitude, userLocation.coordinate.longitude, self){ (Data) in
+        APIManger.getResponseAboutWeatherApi(userLocation.coordinate.latitude, userLocation.coordinate.longitude, self){ (Data , isSuccess , Status) in
+            if isSuccess == false {
+                self.alertWithTitle(message: Status!)
+                return
+            }
             if let weather = Data {
                 OperationQueue.main.addOperation {
                     self.weatherLocationLabel.text  = String(describing: (weather.name)!)

@@ -48,8 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0CDE8F922237B276007E79E9 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = WeatherApp/APIManager.swift; sourceTree = "<group>"; };
-		0CDE8F932237B287007E79E9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = WeatherApp/Constants.swift; sourceTree = "<group>"; };
+		0CDE8F922237B276007E79E9 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		0CDE8F932237B287007E79E9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0CDE8F962237B5B3007E79E9 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		0CDE8F982237B731007E79E9 /* Utills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utills.swift; sourceTree = "<group>"; };
 		847D0D6A22379B400060AA50 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,11 +103,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CDE8F9A2237DB7E007E79E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				847D0D6F22379B400060AA50 /* WeatherViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0CDE8F9B2237DB9F007E79E9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0CDE8F982237B731007E79E9 /* Utills.swift */,
+				0CDE8F922237B276007E79E9 /* APIManager.swift */,
+				0CDE8F932237B287007E79E9 /* Constants.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		847D0D6122379B400060AA50 = {
 			isa = PBXGroup;
 			children = (
-				0CDE8F922237B276007E79E9 /* APIManager.swift */,
-				0CDE8F932237B287007E79E9 /* Constants.swift */,
 				847D0D6C22379B400060AA50 /* WeatherApp */,
 				847D0D8422379B410060AA50 /* WeatherAppTests */,
 				847D0D8F22379B410060AA50 /* WeatherAppUITests */,
@@ -130,9 +146,9 @@
 			isa = PBXGroup;
 			children = (
 				8489D1382237B0C80000FA5C /* AppDelegate.swift */,
-				0CDE8F982237B731007E79E9 /* Utills.swift */,
 				8489D1292237AE310000FA5C /* Model */,
-				847D0D6F22379B400060AA50 /* WeatherViewController.swift */,
+				0CDE8F9A2237DB7E007E79E9 /* View */,
+				0CDE8F9B2237DB9F007E79E9 /* Controller */,
 				847D0D7122379B400060AA50 /* Main.storyboard */,
 				847D0D7722379B410060AA50 /* Assets.xcassets */,
 				0CDE8F962237B5B3007E79E9 /* Icons.xcassets */,
