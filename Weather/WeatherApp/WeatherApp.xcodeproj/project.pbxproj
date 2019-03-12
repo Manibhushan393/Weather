@@ -15,6 +15,7 @@
 		847D0D7B22379B410060AA50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847D0D7922379B410060AA50 /* LaunchScreen.storyboard */; };
 		847D0D8622379B410060AA50 /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D0D8522379B410060AA50 /* WeatherAppTests.swift */; };
 		847D0D9122379B410060AA50 /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D0D9022379B410060AA50 /* WeatherAppUITests.swift */; };
+		8489D1232237AA2D0000FA5C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8489D1222237AA2D0000FA5C /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		847D0D8C22379B410060AA50 /* WeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		847D0D9022379B410060AA50 /* WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITests.swift; sourceTree = "<group>"; };
 		847D0D9222379B410060AA50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8489D1222237AA2D0000FA5C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8489D1232237AA2D0000FA5C /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 				847D0D8422379B410060AA50 /* WeatherAppTests */,
 				847D0D8F22379B410060AA50 /* WeatherAppUITests */,
 				847D0D6B22379B400060AA50 /* Products */,
+				8489D1212237AA2C0000FA5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +132,14 @@
 			path = WeatherAppUITests;
 			sourceTree = "<group>";
 		};
+		8489D1212237AA2C0000FA5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8489D1222237AA2D0000FA5C /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +150,7 @@
 				847D0D6622379B400060AA50 /* Sources */,
 				847D0D6722379B400060AA50 /* Frameworks */,
 				847D0D6822379B400060AA50 /* Resources */,
+				8489D1202237A9B40000FA5C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -253,6 +266,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8489D1202237A9B40000FA5C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		847D0D6622379B400060AA50 /* Sources */ = {
@@ -437,6 +471,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,6 +492,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
