@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		847D0D6E22379B400060AA50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D0D6D22379B400060AA50 /* AppDelegate.swift */; };
 		847D0D7022379B400060AA50 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D0D6F22379B400060AA50 /* WeatherViewController.swift */; };
 		847D0D7322379B400060AA50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847D0D7122379B400060AA50 /* Main.storyboard */; };
 		847D0D7622379B400060AA50 /* WeatherApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 847D0D7422379B400060AA50 /* WeatherApp.xcdatamodeld */; };
@@ -24,6 +23,7 @@
 		8489D1352237AE310000FA5C /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489D12E2237AE310000FA5C /* Main.swift */; };
 		8489D1362237AE310000FA5C /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489D12F2237AE310000FA5C /* Coord.swift */; };
 		8489D1372237AE310000FA5C /* Sys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489D1302237AE310000FA5C /* Sys.swift */; };
+		8489D1392237B0C80000FA5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489D1382237B0C80000FA5C /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,6 @@
 
 /* Begin PBXFileReference section */
 		847D0D6A22379B400060AA50 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		847D0D6D22379B400060AA50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847D0D6F22379B400060AA50 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		847D0D7222379B400060AA50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		847D0D7522379B400060AA50 /* WeatherApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeatherApp.xcdatamodel; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		8489D12E2237AE310000FA5C /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		8489D12F2237AE310000FA5C /* Coord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
 		8489D1302237AE310000FA5C /* Sys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sys.swift; sourceTree = "<group>"; };
+		8489D1382237B0C80000FA5C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +119,8 @@
 		847D0D6C22379B400060AA50 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				8489D1382237B0C80000FA5C /* AppDelegate.swift */,
 				8489D1292237AE310000FA5C /* Model */,
-				847D0D6D22379B400060AA50 /* AppDelegate.swift */,
 				847D0D6F22379B400060AA50 /* WeatherViewController.swift */,
 				847D0D7122379B400060AA50 /* Main.storyboard */,
 				847D0D7722379B410060AA50 /* Assets.xcassets */,
@@ -330,9 +330,9 @@
 				8489D1362237AE310000FA5C /* Coord.swift in Sources */,
 				847D0D7022379B400060AA50 /* WeatherViewController.swift in Sources */,
 				8489D1372237AE310000FA5C /* Sys.swift in Sources */,
-				847D0D6E22379B400060AA50 /* AppDelegate.swift in Sources */,
 				8489D1312237AE310000FA5C /* Wind.swift in Sources */,
 				8489D1332237AE310000FA5C /* CurrentWeather.swift in Sources */,
+				8489D1392237B0C80000FA5C /* AppDelegate.swift in Sources */,
 				8489D1322237AE310000FA5C /* Clouds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
